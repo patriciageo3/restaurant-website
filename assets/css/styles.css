@@ -53,12 +53,30 @@ nav a.active {
 	border-bottom: 2px solid #e6e6e6;
 }
 
+nav.fixed {
+	margin-right: 40px;
+}
+
 .container {
 	text-transform: uppercase;
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
-	padding-top: 30px;
+	padding: 30px 0;
+	transition: all .7s ease-in-out;
+}
+
+.container.fixed_menu {
+	background-color: #0e131c;
+	border-bottom: 1px solid #d3a261;
+	width: 100%;
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px 0;
+	transition: all .7s ease-in-out;
+	z-index: 5;
 }
 
 .gradient {
@@ -71,6 +89,10 @@ nav a.active {
 	border-bottom: 2px solid #e6e6e6;
 	letter-spacing: 3px;
 	font-size: 25px;
+}
+
+#logo.fixed {
+	margin-left: 40px;
 }
 
 #logo a {
