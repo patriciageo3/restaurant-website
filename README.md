@@ -24,4 +24,4 @@ Design from Dribble.
 Author: George Olaru. To see the template design, please [click here](https://dribbble.com/shots/1560982-Rosa-Restaurant-Website/attachments/239212).
 
 ## Quick Live Preview
-![Alt text](assets/img/preview.jpg "Preview")
+![Alt text](assets/img/preview.JPG "Preview")
