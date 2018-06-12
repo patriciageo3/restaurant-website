@@ -12,16 +12,16 @@
 		<link rel="stylesheet" href="./assets/css/styles.css">
 	</head>
 	<body>
-		<header>
+		<header id="go_to_top">
 			<div class="gradient">
 				<div class="container">
 					<h2 id="logo"><a href="index.html"> Rosa </a></h2>
 					<nav>
-						<a href="#" class="active"> Welcome </a>
-						<a href="#"> Menu </a>
-						<a href="#"> Reservations </a>
-						<a href="#"> News </a>
-						<a href="#"> Contact </a>
+						<a href="#go_to_top" class="menu_link active"> Welcome </a>
+						<a href="#about" class="menu_link"> About </a>
+						<a href="#menu" class="menu_link"> Menu </a>
+						<a href="#reservation" class="menu_link"> Reservations </a>
+						<a href="#info" class="menu_link"> Contact </a>
 					</nav>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 		</header>
 		
 		<main>
-			<section id="about">
+			<section id="about" class="breakpoint">
 				<div class="content">
 					<h1 class="highlight"> Discover </h1>
 					<h1 class="topic"> our story </h1>
@@ -52,7 +52,7 @@
 					<h1 class="topic"> recipes </h1>
 			</section>
 			
-			<section id="menu"> 
+			<section id="menu" class="breakpoint"> 
 				<div class="img_container">
 					<img class="align_end" src="./assets/img/menu1.jpg" title="Fresh salad" alt="Fresh salad image"> 
 					<img class="align_end" src="./assets/img/menu2.jpg" title="Fresh fancy salad" alt="Fresh fancy salad image">
@@ -73,7 +73,7 @@
 					<h1 class="topic"> blend </h1>			
 			</section>
 			
-			<section id="reservation"> 
+			<section id="reservation" class="breakpoint"> 
 				<div class="content">
 					<h1 class="highlight"> Culinary </h1>
 					<h1 class="topic"> delight </h1>
@@ -90,11 +90,13 @@
 		</main>
 		
 		<footer>
-			<div id="top">
-				<p id="arrow"> &lsaquo; </p>
-				<p > Top </p>
+			<div id="top"> 
+				<a href="#go_to_top" class="menu_link">
+					<p id="arrow"> &lsaquo; </p>
+					<p>  Top </p>
+				</a>
 			</div>
-			<div id="info">
+			<div id="info" class="breakpoint">
 				<div id="locations">
 					<h2> Locations </h2>
 					<div  class="address_container">
