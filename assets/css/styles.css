@@ -53,17 +53,15 @@ nav a.active {
 	border-bottom: 2px solid #e6e6e6;
 }
 
-nav.fixed {
-	margin-right: 40px;
-}
-
 .container {
 	text-transform: uppercase;
 	display: flex;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: center;
 	padding: 30px 0;
 	transition: all .7s ease-in-out;
+	/* border: 1px solid yellow; */
+	box-sizing: border-box;
 }
 
 .container.fixed_menu {
@@ -72,11 +70,16 @@ nav.fixed {
 	width: 100%;
 	position: fixed;
 	top: 0%;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: 10px 0;
+	padding: 10px 40px;
 	transition: all .7s ease-in-out;
 	z-index: 5;
+}
+
+/* Hamburger Menu (continued in the media queries section) */
+
+.menu_icon {
+	display: none;
+	cursor: pointer;
 }
 
 .gradient {
@@ -89,10 +92,6 @@ nav.fixed {
 	border-bottom: 2px solid #e6e6e6;
 	letter-spacing: 3px;
 	font-size: 25px;
-}
-
-#logo.fixed {
-	margin-left: 40px;
 }
 
 #logo a {
@@ -406,9 +405,59 @@ p#arrow {
 	}
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 700px) {
 	
-	/* !!! ADD THE HAMBURGER FOR THE MENU */
+	nav {
+		display: none;
+	}
+	
+	#open_menu.show, #close_menu.show {
+		display: block;
+		z-index: 5;
+	}
+	
+	#logo {
+		z-index: 5;
+	}
+	
+	.container.show_menu {
+		width: 100%;
+		height: 100vh;
+		/* we need these for when the page is in the welcome section, where the fixed_menu class is no longer active */
+		padding: 10px 40px;
+		position: fixed;
+		top: 0;
+		z-index: 5;
+		/* resetting the following ones */
+		transition: none;
+		border-bottom: none;
+		background-color: rgba(0, 0, 0, .9);
+		align-items: flex-start;
+	}
+	
+	nav.show_menu { 
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		/* because the parent container has some padding, we need to get it out */
+		margin: -10px 0 0 -40px;		
+	}
+	
+	nav.show_menu a {
+		margin-bottom: 10px;
+	}
+	
+	nav.show_menu a:nth-of-type(5) {
+		margin-right: 10px;
+	}
+
+}
+
+@media all and (max-width: 767px) {
 	
 	section#about, section#menu, section#reservation {
 		margin-top: 20px;
